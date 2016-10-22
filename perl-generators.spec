@@ -2,7 +2,7 @@
 
 Name:           %{?scl_prefix}perl-generators
 Version:        1.10
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        RPM Perl dependencies generators
 Group:          Development/Libraries
 License:        GPL+
@@ -74,6 +74,9 @@ install -p -m 644 fileattrs/* '%{buildroot}%{_root_prefix}/lib/rpm/fileattrs'
 %endif
 
 %changelog
+* Sun Jul 24 2016 Petr Pisar <ppisar@redhat.com> - 1.10-2
+- Rebuild without bootstrap
+
 * Tue Jul 12 2016 Jitka Plesnikova <jplesnik@redhat.com> - 1.10-1
 - 1.10 bump
 
