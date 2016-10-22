@@ -2,7 +2,7 @@
 
 Name:           %{?scl_prefix}perl-generators
 Version:        1.10
-Release:        3%{?dist}
+Release:        1%{?dist}
 Summary:        RPM Perl dependencies generators
 Group:          Development/Libraries
 License:        GPL+
@@ -31,7 +31,7 @@ Requires:       %{?scl_prefix}perl >= 4:5.22.0-351
 # Per Perl packaging guidelines, build-requiring perl-generators should
 # deliver Perl macros
 Requires:       %{?scl_prefix}perl-macros
-%if %{defined perl_bootstrap}  || 0%{?scl:1}
+%if %{defined perl_bootstrap}
 # Supply run-time dependencies manually when perl-generators is not available
 Requires:       %{?scl_prefix}perl(Fedora::VSP)
 %endif
@@ -74,12 +74,6 @@ install -p -m 644 fileattrs/* '%{buildroot}%{_root_prefix}/lib/rpm/fileattrs'
 %endif
 
 %changelog
-* Mon Jul 25 2016 Jitka Plesnikova <jplesnik@redhat.com> - 1.10-3
-- Fix dependency for SCL
-
-* Sun Jul 24 2016 Petr Pisar <ppisar@redhat.com> - 1.10-2
-- Rebuild without bootstrap
-
 * Tue Jul 12 2016 Jitka Plesnikova <jplesnik@redhat.com> - 1.10-1
 - 1.10 bump
 
