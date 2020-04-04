@@ -2,7 +2,7 @@
 
 Name:           %{?scl_prefix}perl-generators
 Version:        1.11
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        RPM Perl dependencies generators
 License:        GPL+
 URL:            http://jplesnik.fedorapeople.org/generators
@@ -64,6 +64,9 @@ getting provides and requires from Perl binaries and modules.
 %{_root_prefix}/lib/rpm/perl.*
 
 %changelog
+* Tue Jan 07 2020 Jitka Plesnikova <jplesnik@redhat.com> - 1.11-6
+- Re-rebuild of bootstrapped packages
+
 * Thu Dec 19 2019 Jitka Plesnikova <jplesnik@redhat.com> - 1.11-5
 - SCL
 
