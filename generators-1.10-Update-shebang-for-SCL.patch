@@ -1,0 +1,24 @@
+diff -up generators-1.10/template/bin/perl.prov.orig generators-1.10/template/bin/perl.prov
+--- generators-1.10/template/bin/perl.prov.orig	2016-07-18 15:36:22.288039021 +0200
++++ generators-1.10/template/bin/perl.prov	2016-07-18 15:39:16.089257061 +0200
+@@ -1,4 +1,7 @@
+-#!/usr/bin/perl
++#!/bin/sh
++#! -*-perl-*-
++eval 'exec /usr/bin/scl enable @SCL@ "perl -x $0 ${1+$@}"'
++    if 0;
+ 
+ # This is free software.  You may redistribute copies of it under the terms of
+ # the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
+diff -up generators-1.10/template/bin/perl.req.orig generators-1.10/template/bin/perl.req
+--- generators-1.10/template/bin/perl.req.orig	2016-07-18 15:36:32.511993022 +0200
++++ generators-1.10/template/bin/perl.req	2016-07-18 15:39:21.793231398 +0200
+@@ -1,4 +1,7 @@
+-#!/usr/bin/perl
++#!/bin/sh
++#! -*-perl-*-
++eval 'exec /usr/bin/scl enable @SCL@ "perl -x $0 ${1+$@}"'
++    if 0;
+ 
+ # This is free software.  You may redistribute copies of it under the terms of
+ # the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
